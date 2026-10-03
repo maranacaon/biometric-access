@@ -1,11 +1,12 @@
 import { Icon } from "../ui/Icon";
+import { FingerprintGraphic } from "../ui/FingerprintGraphic";
 
 export function Sidebar() {
   return (
     <aside className="sidebar">
       <div className="brand">
         <span className="brand-mark">
-          <Icon name="finger" />
+          <FingerprintGraphic />
         </span>
         <span>
           BIOMETRIC<span>ACCESS</span>
