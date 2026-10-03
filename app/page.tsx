@@ -17,13 +17,31 @@ export default function Home() {
         <Topbar />
         <div className="dashboard-grid">
           <div className="primary-column">
-            <div className="section-title"><div><h2>Access validation</h2><p>Start a scan to verify an identity.</p></div><span className="live-pill"><i /> LIVE</span></div>
-            <ScanCard state={reader.state} step={reader.step} connection={reader.connection} onStart={reader.startScan} onReset={reader.reset} />
+            <div className="section-title">
+              <div>
+                <h2>Access validation</h2>
+                <p>Start a scan to verify an identity.</p>
+              </div>
+              <span className="live-pill">
+                <i /> LIVE
+              </span>
+            </div>
+            <ScanCard
+              state={reader.state}
+              step={reader.step}
+              connection={reader.connection}
+              onStart={reader.startScan}
+              onReset={reader.reset}
+            />
             <Metrics />
           </div>
           <ActivityPanel logs={reader.logs} />
         </div>
-        <footer><span><span className="footer-dot" /> All systems operational</span><span>Demo environment · <a>How it works?</a></span></footer>
+        <footer>
+          <span>
+            <span className="footer-dot" /> All systems operational
+          </span>
+        </footer>
       </section>
     </main>
   );
