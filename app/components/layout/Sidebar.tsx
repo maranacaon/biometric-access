@@ -1,7 +1,12 @@
+ "use client";
+
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { Icon } from "../ui/Icon";
 import { FingerprintGraphic } from "../ui/FingerprintGraphic";
 
 export function Sidebar() {
+  const pathname = usePathname();
   return (
     <aside className="sidebar">
       <div className="brand">
@@ -14,14 +19,14 @@ export function Sidebar() {
       </div>
       <nav>
         <p className="nav-label">Workspace</p>
-        <a className="nav-item active">
+        <Link className={`nav-item ${pathname === "/" ? "active" : ""}`} href="/">
           <Icon name="grid" />
           Overview
-        </a>
-        <a className="nav-item">
+        </Link>
+        <Link className={`nav-item ${pathname === "/users" ? "active" : ""}`} href="/users">
           <Icon name="users" />
           Employees <b>24</b>
-        </a>
+        </Link>
         <a className="nav-item">
           <Icon name="clock" />
           History

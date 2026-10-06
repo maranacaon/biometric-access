@@ -7,7 +7,11 @@ export type IconName =
   | "bell"
   | "arrow"
   | "check"
-  | "refresh";
+  | "refresh"
+  | "plus"
+  | "search"
+  | "edit"
+  | "trash";
 
 const paths: Record<IconName, string> = {
   finger: "M12 3a7 7 0 0 0-7 7v2m11-7a5 5 0 0 1 1 3v2m-7-7a3 3 0 0 1 3 3v5m-6-3v2a6 6 0 0 0 12 0v-2M8 10v3a4 4 0 0 0 8 0v-3",
@@ -19,6 +23,10 @@ const paths: Record<IconName, string> = {
   arrow: "M5 12h14M13 6l6 6-6 6",
   check: "m5 12 4 4L19 6",
   refresh: "M20 11a8 8 0 0 0-14.9-3M4 5v4h4M4 13a8 8 0 0 0 14.9 3M20 19v-4h-4",
+  plus: "M12 5v14M5 12h14",
+  search: "m21 21-4.3-4.3M10.8 18a7.2 7.2 0 1 1 0-14.4 7.2 7.2 0 0 1 0 14.4Z",
+  edit: "m4 16.5-.7 3.2 3.2-.7L18.8 6.7a2.3 2.3 0 0 0-3.2-3.2L4 16.5ZM14.5 5.5l4 4",
+  trash: "M5 7h14M10 11v6M14 11v6M9 7V4h6v3m-9 0 1 13h10l1-13",
 };
 
 export function Icon({ name }: { name: IconName }) {
